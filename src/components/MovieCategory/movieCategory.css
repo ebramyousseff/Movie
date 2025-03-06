@@ -1,0 +1,14 @@
+.kind {
+    @apply bg-yellow-600 absolute -rotate-45 top-3 -left-7 px-8 uppercase
+}
+.info {
+    @apply text-white text-sm absolute bottom-6 p-2
+}
+
+.movieCard::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.24);
+}
+

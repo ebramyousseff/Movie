@@ -1,0 +1,11 @@
+.movieShadow {
+    position: relative;
+}
+
+.movieShadow::before{
+    content: "";
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.64);
+    z-index: 1;
+    position: absolute;
+}
