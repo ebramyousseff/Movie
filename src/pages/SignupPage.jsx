@@ -15,13 +15,13 @@ const SignupPage = () => {
           <label className="text-white text-xl uppercase">Name</label>
           <div className="flex gap-7">
             <input
-            name="name"
+            name="firstName"
               type="text"
               placeholder="Enter Your First Name"
               className="text-white text-[20px] bg-transparent border border-white w-[29rem] h-[60px] rounded-md p-4"
             />
             <input
-            name="name"
+            name="lastName"
               type="text"
               placeholder="Enter Your Last Name"
               className="text-white text-[20px] bg-transparent border border-white w-[29rem] h-[60px] rounded-md p-4"

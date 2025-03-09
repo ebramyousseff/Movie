@@ -11,8 +11,11 @@ import { ToastContainer } from "react-toastify";
 import AllTV from "./pages/AllTV"
 import TVCategory from "./components/TVCategory"
 import TVDetails from "./pages/tvDetails/TVDetails"
+import ProfilePage from "./pages/ProfilePage"
+import { useState } from "react"
 
 function App() {
+  const [profileImage, setProfileImage] = useState(null);
 
   return (
     <>
@@ -27,7 +30,7 @@ function App() {
         <Route path='/search' element={<SearchResults />} />
         <Route path="/movie" element={<AllMovies/>}/>
         <Route path="/tv" element={<AllTV/>}/>
-
+        <Route path="/profile" element={<ProfilePage profileImage={profileImage} setProfileImage={setProfileImage} />} />
         
         
       </Routes>

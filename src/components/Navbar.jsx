@@ -1,11 +1,13 @@
 import Logo from "../images/logo1.png";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
 import { IoIosMenu } from "react-icons/io";
 import { useEffect, useState } from "react";
 import { auth } from "../firebase.config";
 import { signOut, onAuthStateChanged } from "firebase/auth";
 import { toast } from "react-toastify";
+import { FaUserCircle } from "react-icons/fa";
+
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -86,12 +88,7 @@ const Navbar = () => {
           <div className="flex items-center justify-center gap-3">
             {user ? (
               <>
-                <h3 onClick={handleSignOut} className="cursor-pointer text-white text-xl uppercase">Logout</h3>
-                <button 
-                  onClick={handleSignOut} 
-                  className="text-white text-xl cursor-pointer border  bg-red-600 border-none rounded-3xl w-24 text-center flex justify-center items-center h-12">
-                  SignOut
-                </button>
+                <Link to="/profile"><FaUserCircle className="rounded-full text-4xl text-white"/></Link>
               </>
             ) : (
               <>

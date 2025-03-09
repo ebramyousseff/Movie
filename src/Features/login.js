@@ -9,8 +9,12 @@ export default async function loginFeature (e , navigate ) {
     try {
       const userCredential = await signInWithEmailAndPassword(auth, data.get("email") ,data.get("password") );
       console.log("User logged in:", userCredential.user);
+      localStorage.setItem("user" , JSON.stringify({
+        email: userCredential.user.email ,
+        displayName: userCredential.user.displayName ,
+      }))
       toast.success("Login successful!"); 
-      navigate("/"); 
+      navigate("/profile"); 
     } catch (error) {
       if (error.code === "auth/wrong-password") {
         toast.error("Incorrect password. Please try again."); 
