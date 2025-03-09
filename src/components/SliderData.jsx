@@ -18,25 +18,25 @@ const SliderData = () => {
   };
 
   return (
-    <section className="sec py-2 relative w-full h-[100vh]">
+    <section className="sec py-2 relative w-full h-[100vh] pr-44">
       <div className=" flex flex-row-reverse justify-between items-center">
-        <div className="min-w-fit px-60 py-40">
+        <div className="min-w-fit  py-40">
           <img
             src={currentData.image}
             alt={currentData.title}
-            className=" h-[32rem]"
+            className=" h-[30rem]"
           />
         </div>
-        <div className="flex flex-col mx-52 gap-7">
+        <div className="flex flex-col mx-44 gap-7">
           <div className="w-auto">
-            <h3 className="text-white text-8xl leading-none uppercase font-bold whitespace-pre-line">
+            <h3 className="text-white text-6xl leading-none uppercase font-bold whitespace-pre-line">
               {currentData.title}
-              <span className="text-6xl font-normal text-gray-400 ml-4">
+              <span className="text-5xl font-normal text-gray-400 ml-4">
                 2024
               </span>
             </h3>
           </div>
-          <div className="flex gap-7 w-full items-center mb-3">
+          <div className="flex gap-4 w-full items-center mb-2">
             <Link to="/">
               <div className="text-2xl flex text-[#dd003f] font-bold uppercase items-center">
                 <div className="rounded-full border border-[#dd003f] w-14 h-14 relative mr-5">
